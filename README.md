@@ -1,4 +1,4 @@
-# poTranslator
+# poTranslation
 
 ## Description
 

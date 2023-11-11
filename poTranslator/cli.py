@@ -73,7 +73,7 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'],
 @click.option('-q', '--quiet', is_flag=True, help='Suppress output.')
 @click.option('-w', '--write', is_flag=True, default=True, help='Write to the file.')
 @click.argument('po_file_path', type=click.Path(exists=True))
-def translate(po_file_path, source_language, dest_language, lang, out_file_path, env_path, force, verbose, quiet):
+def translate(po_file_path, source_language, dest_language, lang, out_file_path, env_path, force, verbose, quiet, write):
     """This command translates a PO file."""
     
     args = click.get_current_context().params  # Get all command line parameters

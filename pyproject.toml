@@ -3,12 +3,12 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "poTranslate"
-version = "0.0a1"
+name = "poTranslation"
+version = "0.0.1a1"
 authors = [
     { name="Steven Guo", email="author@example.com" },
 ]
-description = "Translate po files with Microsoft Translator API"
+description = "This is a simple python library/CLI tool to translate .po files using various APIs."
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
