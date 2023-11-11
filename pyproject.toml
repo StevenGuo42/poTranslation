@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poTranslate"
+version = "0.0a1"
+authors = [
+    { name="Steven Guo", email="author@example.com" },
+]
+description = "Translate po files with Microsoft Translator API"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 3 - Alpha", 
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Localization",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "click",
+    "requests",
+    "polib",
+    "tqdm"
+]
+
+
+[project.scripts]
+potranslate="poTranslator.cli:translate"
+
+[project.urls]
+Homepage = "https://github.com/StevenGuo42/poTranslator"
+Repository = "https://github.com/StevenGuo42/poTranslator.git"
