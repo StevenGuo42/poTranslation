@@ -38,3 +38,5 @@ potranslate="poTranslator.cli:translate"
 [project.urls]
 Homepage = "https://github.com/StevenGuo42/poTranslator"
 Repository = "https://github.com/StevenGuo42/poTranslator.git"
+"Issue Tracker" = "https://github.com/StevenGuo42/poTranslator/issues"
+
