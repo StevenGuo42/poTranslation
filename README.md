@@ -9,7 +9,7 @@ This is a simple python library/CLI tool to translate `.po` files using various 
 Install and update using [pip][PIP]:
 
 ```bash
-pip install -U poTranslator
+pip install -U poTranslation
 ```
 
 ## Usage
@@ -60,8 +60,8 @@ Distributed under the BSD 3-Clause License. See `LICENSE` for more information.
 
 ## Links
 
-Source Code: [https://github.com/StevenGuo42/poTranslator](https://github.com/StevenGuo42/poTranslator)  
-Issue Tracker: [https://github.com/StevenGuo42/poTranslator/issues](https://github.com/StevenGuo42/poTranslator/issues)
+Source Code: [https://github.com/StevenGuo42/poTranslation](https://github.com/StevenGuo42/poTranslation)  
+Issue Tracker: [https://github.com/StevenGuo42/poTranslation/issues](https://github.com/StevenGuo42/poTranslation/issues)
 
 [//]: # (Links)
 [PIP]: https://pip.pypa.io/en/stable/getting-started/
