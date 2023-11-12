@@ -162,6 +162,5 @@ cython_debug/
 
 .pypirc
 .vscode
-
-
+# ignore .po files
 *.po
