@@ -33,6 +33,9 @@ dependencies = [
     "openai",
 ]
 
+[tool.setuptools.packages.find]
+exclude = ["app*, *.po"]
+
 
 [project.scripts]
 # potranslate="poTranslation.cli:translate"
