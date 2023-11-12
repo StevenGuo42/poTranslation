@@ -40,9 +40,9 @@ class CLIHandler:
                 raise ValueError("Error: <out_path> cannot be specified when <directory> is specified.")
             
             if not self.locale and not self.quiet:
-                print("Iterating through all <locale> directory in the <directory>.")
+                print("Iterating through all <locale> directory in <directory>.")
             if not self.domain and not self.quiet:
-                print("Iterating through all <domain> in the <directory>.")
+                print("Iterating through all '<domain>.po' file in '<locale>/LC_MESSAGES'")
             if not self.quiet:
                 print(f"Translating PO files in {self.directory}", end="")
                 

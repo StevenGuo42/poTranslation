@@ -37,12 +37,12 @@ potranslate ./messages.po -w                    # translate and NOT write to the
 
 #### Translate a directory of `.po` files
 
-This would work with the `.po` files compiled by `pybabel`
+This would work with the `.po` files compiled using `pybabel compile [options]`<sup>[[Babel CLI]][pybabel-compile]</sup>
 
 ```bash
-potranslate -d app/translations                 # translate app/translations/<locale>/LC_MESSAGES/<domain>.mo
-potranslate -d app/translations -l zh           # translate app/translations/zh/LC_MESSAGES/<domain>.mo
-potranslate -d app/translations -D messages     # translate app/translations/<locale>/LC_MESSAGES/messages.mo
+potranslate -d app/translations                 # translate app/translations/<locale>/LC_MESSAGES/<domain>.po
+potranslate -d app/translations -l zh           # translate app/translations/zh/LC_MESSAGES/<domain>.po
+potranslate -d app/translations -D messages     # translate app/translations/<locale>/LC_MESSAGES/messages.po
 ```
 #### CLI Usage
 
@@ -63,13 +63,15 @@ Options:
   -h, --help                  Show this message and exit.
 ```
 
-## Roadmap
+## Features
 
 - [ ] Multiple translation services support
-  - [x] [Microsoft Translate API][MS-API]
-  - [x] [OpenAI API][OPENAI-API]
-  - [ ] [Google Translate API][GOOGLE-API]
-  - [ ] [DeepL API][DEEPL-API]
+  - [x] Microsoft Translate API<sup>[[MS]][MS-API]</sup>
+  - [x] OpenAI API<sup>[[OpenAI]][OPENAI-API]</sup>
+  - [ ] Google Translate API<sup>[[Google]][GOOGLE-API]</sup>
+  - [ ] DeepL API<sup>[[DeepL]][DEEPL-API]</sup>
+- [x] Support for *printf-style* formatted strings<sup>[[printf-style]][py-printf-style]</sup>
+- [x] Support for `Babel` compiled `.po` files <sup>[[Babel CLI]][pybabel-compile][[Bable]][BABEL_]</sup>
 
 > **_Challenge:_**  Some services require an glossary to be created before translation for formatted strings with placeholders. 
 
@@ -88,3 +90,6 @@ PyPI: [https://pypi.org/project/poTranslation/](https://pypi.org/project/poTrans
 [OPENAI-API]: https://platform.openai.com/docs/guides/text-generation/chat-completions-api
 [GOOGLE-API]: https://cloud.google.com/translate/docs/reference/api-overview
 [DEEPL-API]: https://www.deepl.com/docs-api/translate-text
+[BABEL_]: https://babel.pocoo.org/en/latest/
+[pybabel-compile]: https://babel.pocoo.org/en/latest/cmdline.html#compile
+[py-printf-style]: https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting
