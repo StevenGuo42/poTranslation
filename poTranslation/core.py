@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 
 from .ms import translator as ms_t
-
+from .openai import translator as openai_t
 
 
 class Translator:
@@ -31,20 +31,25 @@ class Translator:
 
         # region service init
         if self.service == 'MS':
-            self.api_key = os.environ.get('API_KEY')
-            self.api_region = os.environ.get('API_REGION')
+            self.api_key = os.environ.get('MS_API_KEY')
+            self.api_region = os.environ.get('MS_API_REGION')
             
             if not self.api_region:
-                raise ValueError("Error: MS API_REGION is not set in environment variables.")
+                raise ValueError("Error: MS_API_REGION is not set in environment variables.")
             if not self.api_key:
-                raise ValueError("Error: MS API_KEY is not set in environment variables.")
+                raise ValueError("Error: MS_API_KEY is not set in environment variables.")
             
             self.service_t = ms_t(self.api_key, self.api_region, self.placeholder_pattern, self.source_language, self.dest_language)
             
         elif self.service == 'GOOGLE':
             raise ValueError("Google Translate is not supported yet.")
         elif self.service == 'OPENAI':
-            raise ValueError("OpenAI translation is not supported yet.")
+            
+            self.api_key = os.environ.get('OPENAI_API_KEY')
+            if not self.api_key:
+                raise ValueError("Error: OPENAI_API_KEY is not set in environment variables.")
+            self.service_t = openai_t(self.api_key, self.source_language, self.dest_language, lang)
+            
         else:
             raise ValueError("Error: TRANSLATOR_SERVICE is not valid.")
         # endregion

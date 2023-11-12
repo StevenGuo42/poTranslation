@@ -14,16 +14,14 @@ pip install -U poTranslation
 
 ## Usage
 
-Create a `.env` file in your working directory or parent directory with the following content:  
+Create a `.env` file in your working directory or parent directory with the following content for the API you want to use:   
 
 ```properties
 TRANSLATOR_SERVICE=YOUR_TRANSLATOR_SERVICE
-API_KEY=YOUR_API_KEY
-API_REGION=YOUR_API_REGION
+MS_API_KEY=YOUR_MS_API_KEY
+MS_API_REGION=YOUR_MS_API_REGION
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
 ```
-
-> **_NOTE:_**  TRANSLATOR_SERVICE currently supports `MS` only.
-> `API_REGION` is optional for some services.
 
 ### Command Line Interface Example
 
@@ -50,18 +48,20 @@ Options:
 
 - [ ] Multiple translation services support
   - [x] [Microsoft Translate API][MS-API]
-  - [ ] [OpenAI API][OPENAI-API]
+  - [x] [OpenAI API][OPENAI-API]
   - [ ] [Google Translate API][GOOGLE-API]
   - [ ] [DeepL API][DEEPL-API]
 
 > **_Challenge:_**  Some services require an glossary to be created before translation for formatted strings with placeholders. 
 
+## License
 Distributed under the BSD 3-Clause License. See `LICENSE` for more information.
 
 ## Links
 
 Source Code: [https://github.com/StevenGuo42/poTranslation](https://github.com/StevenGuo42/poTranslation)  
 Issue Tracker: [https://github.com/StevenGuo42/poTranslation/issues](https://github.com/StevenGuo42/poTranslation/issues)
+PyPI: [https://pypi.org/project/poTranslation/](https://pypi.org/project/poTranslation/)
 
 [//]: # (Links)
 [PIP]: https://pip.pypa.io/en/stable/getting-started/
