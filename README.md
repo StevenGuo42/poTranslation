@@ -23,20 +23,39 @@ MS_API_REGION=YOUR_MS_API_REGION
 OPENAI_API_KEY=YOUR_OPENAI_API_KEY
 ```
 
-### Command Line Interface Example
+### CLI Examples
+
+#### Translate a `.po` file
 
 ```bash
-potranslate --help
-poTranslate ./messages.po -s en -d zh -f
+potranslate ./messages.po                       # translate untranslated text from 'en' to language specified in the .po file, save to ./messages.po
+potranslate ./messages.po -s en -l zh           # translate from 'en' to 'zh'
+potranslate ./messages.po -o ./translated.po    # translated .po file, save to ./translated.po
+potranslate ./messages.po -F                    # force translation of all entries
+potranslate ./messages.po -w                    # translate and NOT write to the file
 ```
 
+#### Translate a directory of `.po` files
+
+This would work with the `.po` files compiled by `pybabel`
+
+```bash
+potranslate -d app/translations                 # translate app/translations/<locale>/LC_MESSAGES/<domain>.mo
+potranslate -d app/translations -l zh           # translate app/translations/zh/LC_MESSAGES/<domain>.mo
+potranslate -d app/translations -D messages     # translate app/translations/<locale>/LC_MESSAGES/messages.mo
+```
+#### CLI Usage
+
 ```text
+Usage: potranslate [OPTIONS] [PO_FILE_PATH]
 Options:
-  -s, --source-language TEXT  Source language for translation.  [default: en]
-  -d, --dest-language TEXT    Destination language for translation.  [default: (load from .po file)]
-  -l, --lang TEXT             Programming langrage of formatted string.  [default: python]
-  -f, --file PATH             Path to the output file.  [default: {po_file_path}]
+  -s, --source_language TEXT  Translate from (language).  [default: en]
+  -l, --locale TEXT           Translate to (language).  [default: (load from .po file)]
+  -L, --lang TEXT             Programming langrage of formatted string.  [default: python]
+  -o, --output PATH           Path to the output file.  [default: {po_file_path}]
   -e, --env PATH              Path to the env file.  [default: (load from cwd and parent dir)]
+  -d, --directory PATH        Directory of the PO files.
+  -D, --domain TEXT           Domain of the PO file.
   -F, --force                 Force translation of all entries.
   -v, --verbose               Enable verbose output.
   -q, --quiet                 Suppress output.
