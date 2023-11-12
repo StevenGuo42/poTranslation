@@ -3,8 +3,8 @@ import re
 from dotenv import load_dotenv
 
 
-from .ms import translator as ms_t
-from .openai import translator as openai_t
+from poTranslation.ms_t import translator as ms_t
+from poTranslation.openai_t import translator as openai_t
 
 
 class Translator:

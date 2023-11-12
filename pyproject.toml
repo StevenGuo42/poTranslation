@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "poTranslation"
-version = "0.0.2a1"
+version = "0.0.3a1"
 authors = [
     { name="Steven Guo", email="author@example.com" },
 ]
@@ -35,8 +35,8 @@ dependencies = [
 
 
 [project.scripts]
-potranslate="poTranslation.cli:translate"
-
+# potranslate="poTranslation.cli:translate"
+potranslate="poTranslation:translate"
 [project.urls]
 Homepage = "https://github.com/StevenGuo42/poTranslation"
 Repository = "https://github.com/StevenGuo42/poTranslation.git"
