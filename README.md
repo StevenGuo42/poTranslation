@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple python library/CLI tool to translate `.po` files using various APIs.
+This is a simple Python library/CLI tool to translate `.po` files using various APIs. Currently supports Microsoft Translate and OpenAI API. 
 
 ## Installation
 
@@ -73,7 +73,7 @@ Options:
 - [x] Support for *printf-style* formatted strings<sup>[[printf-style]][py-printf-style]</sup>
 - [x] Support for `Babel` compiled `.po` files <sup>[[Babel CLI]][pybabel-compile][[Bable]][BABEL_]</sup>
 
-> **_Challenge:_**  Some services require an glossary to be created before translation for formatted strings with placeholders. 
+> **_Challenge:_**  Some services require a glossary to be created before translation for formatted strings with placeholders. 
 
 ## License
 Distributed under the BSD 3-Clause License. See `LICENSE` for more information.
